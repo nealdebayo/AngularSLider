@@ -1,0 +1,27 @@
+<section class="mini-events-section" (window:resize)="deduceEvents($event)">
+  <div class="nav-and-header">
+      <h2>UPCOMING EVENTS</h2>
+      <div class="events-nav">
+        <button (click)="navLeft()" color="primary" mat-raised-button>{{"<<"}}</button>
+        <button (click)="navRight()" color="primary" mat-raised-button>{{">>"}}</button>
+      </div>
+  </div>
+  <div class="events-overflow">
+    <div class="top-events" >
+      <ng-container *ngFor="let event of currentEventsDisplay">
+          <div [ngClass]="{'event-wrapper': true, 
+            'enterModeLeft': isEnterModeLeft, 
+            'enterModeRight': isEnterModeRight}">
+              <div class="event-image">
+
+              </div>
+              <div class="details">
+                  <div class="title">{{event}}Event title</div>
+                  <div class="date">Event date and time</div>
+                  <div class="venue">Venue</div>
+              </div>
+          </div>
+      </ng-container>
+    </div>
+  </div>
+</section>

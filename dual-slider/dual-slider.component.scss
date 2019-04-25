@@ -1,0 +1,132 @@
+.mini-events-section{
+    margin: 40px;
+    height: 260px;
+    .nav-and-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .events-overflow{
+      @media screen and (max-width: 768px){
+        .top-events{
+          position: relative;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      .top-events{
+        position: absolute;
+        // overflow-x: hidden;
+        width: 88vw;
+        // margin-left: 3vw;
+        // transition: 2s all;
+        // scroll-behavior: smooth;
+        // margin-right: -300px;
+        display: flex;
+        justify-content: space-between;
+        .event-wrapper{
+          width: 44%;
+          display: grid;
+          grid-template-areas:
+          'event_image details';
+          grid-column-gap: 12px;
+          margin-right: 22px;
+          
+          .event-image{
+            grid-area: event_image;
+            border: 1px solid #000;
+            height: 200px;
+            width: 200px;
+          }
+          .details{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #000;
+            grid-area: details;
+            div{
+              border: 1px solid #000;
+              padding: 2px;
+            }
+          }
+        }
+      }
+    }
+  
+  
+  }
+  
+  .slideLeft {
+    animation-name: slideLeft;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slideLeft {
+    from {
+      position: relative;
+      right: 0;
+    }
+    to {
+      position: relative;
+      right: 100vw;
+    }
+  }
+  
+  
+  .slideRight {
+    animation-name: slideRight;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slideRight {
+    from {
+      position: relative;
+      left: 0;
+    }
+    to {
+      position: relative;
+      left: 100vw;
+    }
+  }
+  
+  
+  .enterModeLeft {
+    animation-name: enterModeLeft;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes enterModeLeft {
+    from {
+      position: relative;
+      right: -100vw;
+    }
+    to {
+      position: relative;
+      right : 0vw;
+    }
+  }
+  
+  .enterModeRight {
+    animation-name: enterModeRight;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes enterModeRight {
+    from {
+      position: relative;
+      left: -100vw;
+    }
+    to {
+      position: relative;
+      left : 0vw;
+    }
+  }
+  
+  // .newEventsFromRight{
+  //   display:
+  // }
